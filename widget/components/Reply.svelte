@@ -88,7 +88,7 @@
     />
   </div>
 
-  <div>
+  <div class="pl-1">
     <button
       
       class="text-sm bg-gray-200 p-2 px-4 font-bold"
