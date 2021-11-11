@@ -94,7 +94,7 @@
 
   <div class="pl-1">
     <button
-      class="border mr-3 rounded px-2 py-1"
+      class="border mr-3 rounded px-2 py-1 focus:outline-none focus:ring focus:border-blue-300"
       class:cusdis-disabled={loading}
       on:click={addComment}>{loading ? t('sending') : t('post_comment')}</button
     >
