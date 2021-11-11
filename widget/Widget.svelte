@@ -101,7 +101,7 @@
 
     <div class="mt-4">
       {#if loadingComments}
-        <div>
+        <div class="text-gray-900 dark:text-gray-100">
           {t('loading')}...
         </div>
       {:else}
@@ -123,5 +123,9 @@
     </div>
 
     <div class="my-8" />
+
+    <div class="text-center text-sm text-gray-900 dark:text-gray-100">
+      <a class="underline " href="https://cusdis.com">{t('powered_by')}</a>
+    </div>
   </div>
 {/if}

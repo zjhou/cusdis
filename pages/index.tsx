@@ -93,7 +93,7 @@ function IndexPage({ session, contributers }: Props) {
             </Box>
 
 
-            {/* 
+            {/*
             <Link
               isExternal
               href="https://github.com/djyde/cusdis"
@@ -310,7 +310,7 @@ function IndexPage({ session, contributers }: Props) {
                       Webhook
                     </ListItem>
                     <ListItem>
-                      Spam filter (comming soon)
+                      Spam filter (coming soon)
                       </ListItem>
                   </List>
                 </Box>
