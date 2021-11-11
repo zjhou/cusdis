@@ -1,5 +1,6 @@
 <script>
   import { getContext } from 'svelte'
+  import { postMessage } from '../utils';
   import { t } from '../i18n'
   export let parentId
 
@@ -42,7 +43,10 @@
       })
       await refresh()
       teardown()
-      setMessage(t('comment_has_been_sent'))
+      postMessage("COMMENT_SENT", {
+        message: t('comment_has_been_sent'),
+        res,
+      })
     } finally {
       loading = false
     }
