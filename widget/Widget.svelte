@@ -2,6 +2,7 @@
   import './theme.css'
   import { onMount, setContext } from 'svelte'
   import axios from 'redaxios'
+  import { postMessage } from './utils';
   import Comment from './components/Comment.svelte'
   import Reply from './components/Reply.svelte'
   import { t } from './i18n'
@@ -81,8 +82,9 @@
     getComments(p)
   }
 
-  onMount(() => {
-    getComments()
+  onMount(async () => {
+    await getComments();
+    postMessage("COMMENTS_LOADED");
   })
 
 </script>
@@ -100,12 +102,8 @@
     <div class="my-8" />
 
     <div class="mt-4">
-      {#if loadingComments}
-        <div class="text-gray-900 dark:text-gray-100">
-          {t('loading')}...
-        </div>
-      {:else}
-        {#each commentsResult.data as comment (comment.id)}
+      {#if commentsResult}
+        {#each (commentsResult || {}).data as comment (comment.id)}
           <Comment {comment} firstFloor={true} />
         {/each}
         {#if commentsResult.pageCount > 1}
