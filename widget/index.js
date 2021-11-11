@@ -20,7 +20,7 @@ const makeIframeContent = (target) => {
       }
     </style>
   </head>
-  <body>
+  <body class="font-mono">
     <div id="root"></div>
     <script src="${iframeJsPath}" type="module">
       

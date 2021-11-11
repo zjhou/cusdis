@@ -4,7 +4,7 @@ export default {
   loading: 'Loading',
 
   // comment
-  email: 'Email (optional)',
+  email: 'Email',
   nickname: 'Nickname',
   reply_placeholder: 'Reply...',
   reply_btn: 'Reply',
