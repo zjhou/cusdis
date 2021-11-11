@@ -83,8 +83,12 @@
   }
 
   onMount(async () => {
-    await getComments();
-    postMessage("COMMENTS_LOADED");
+    try {
+      await getComments();
+      postMessage("COMMENTS_LOADED");
+    } catch (e) {
+      postMessage("COMMENTS_LOAD_ERRORED");
+    }
   })
 
 </script>
